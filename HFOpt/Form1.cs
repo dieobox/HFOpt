@@ -34,6 +34,8 @@ namespace HFOpt
             chartControl5.DataSource = null;
             chartControl6.DataSource = null;
             chartControl7.DataSource = null;
+            dataGridView2.DataSource = null;
+            dataGridView3.DataSource = null;
         }
 
         private void ImportButton_Click(object sender, EventArgs e)
@@ -94,6 +96,10 @@ namespace HFOpt
             chartControl2.RefreshData();
             chartControl1.Refresh();
             chartControl2.Refresh();
+            dataGridView2.DataSource = pdpdataBindingSource;
+            dataGridView3.DataSource = pdpdataBindingSource;
+            dataGridView2.Refresh();
+            dataGridView3.Refresh();
             StartForecast.Enabled = true;
             StartOptimize.Enabled = true;
             Cursor.Current = cur;
